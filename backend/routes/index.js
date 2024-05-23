@@ -9,6 +9,8 @@ const updateuser=require('../controller/updateuser');
 const uploadproduct=require('../controller/uploadproduct');
 const getproduct=require('../controller/getproduct');
 const updateproduct=require('../controller/updateproduct');
+const getcategoryproduct=require('../controller/getcategoryproduct');
+const categorywiseproduct = require('../controller/getcategorywiseproduct');
 router
  .post('/signup',userSignup)
  .post('/login',userSignin)
@@ -17,5 +19,7 @@ router
  .post('/updateuser',Auth,updateuser)
  .post('/uploadproduct',Auth,uploadproduct)
  .get('/getproduct',getproduct)
- .post('/updateproduct',Auth,updateproduct);
+ .post('/updateproduct',Auth,updateproduct)
+ .get('/categoryproduct',getcategoryproduct)
+ .get('/categorywise',categorywiseproduct)
  module.exports=router;

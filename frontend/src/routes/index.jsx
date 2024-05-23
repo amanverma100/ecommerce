@@ -8,6 +8,7 @@ import Adminpanel from '../componentes/pages/Admin/Adminpanel';
 import Users from '../componentes/pages/Admin/Users';
 import Updateuser from '../componentes/pages/Admin/Updateuser';
 import Products from '../componentes/pages/Admin/Products';
+import GetCategoryProduct from '../componentes/pages/Product/GetCategoryProduct';
 const router=createBrowserRouter([{
     path:"/",
     element:<App/>,
@@ -45,6 +46,10 @@ const router=createBrowserRouter([{
                 }
             ]
         },
+        {
+            path:"categoryproduct/:categoryname",
+            element:<GetCategoryProduct/>
+        }
        
 
     ]

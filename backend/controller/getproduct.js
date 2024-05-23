@@ -1,6 +1,6 @@
  const productModel=require('../model/productModel');
  const getproduct=async(req,res)=>
-    {
+    {      
         try{
             const data=await productModel.find().sort({createdAt:-1});
               res.json({productdata:data,success:true,error:false}) 

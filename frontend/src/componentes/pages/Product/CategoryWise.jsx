@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Getproduct = () => {
+const CategoryWise = () => {
   return (
     <div>
-       get
+      
     </div>
   )
 }
 
-export default Getproduct
+export default CategoryWise

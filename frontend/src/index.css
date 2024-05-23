@@ -44,5 +44,8 @@ button{
 ::-webkit-scrollbar-track{
   background-color:rgb(108, 75, 208);
 }
+.scrollbardisplaynone::-webkit-scrollbar{
+    display:none;
+}
 
 

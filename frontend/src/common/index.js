@@ -1,3 +1,4 @@
+
 const backendDomain="http://127.0.0.1:5000"
 const summaryAPI={
      signup:{
@@ -32,6 +33,10 @@ const summaryAPI={
      updateproduct:
      {
       url:`${backendDomain}/api/updateproduct`
+     },
+     categoryproduct:
+     {
+     url:`${backendDomain}/api/categoryproduct`
      }
 }
 export default summaryAPI;
