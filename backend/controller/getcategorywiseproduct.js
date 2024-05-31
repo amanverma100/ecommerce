@@ -1,5 +1,5 @@
 const productModel=require('../model/productModel');
-const categorywiseproduct=async(req,res)=>
+const getcategorywiseproduct=async(req,res)=>
     {    const {category}=req.body;
         try{
             const data=await productModel.find({category:category});
@@ -10,4 +10,4 @@ const categorywiseproduct=async(req,res)=>
            res.status(400).json({message:"product not found"})
         }
     }
-    module.exports=categorywiseproduct;
+    module.exports=getcategorywiseproduct;

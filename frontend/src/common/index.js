@@ -37,6 +37,10 @@ const summaryAPI={
      categoryproduct:
      {
      url:`${backendDomain}/api/categoryproduct`
+     },
+     categorywise:
+     {
+      url:`${backendDomain}/api/categorywise`
      }
 }
 export default summaryAPI;
