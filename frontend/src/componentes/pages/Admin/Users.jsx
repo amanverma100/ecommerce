@@ -87,7 +87,7 @@ const Users = () => {
        }
       </tbody>
      </table>
-    {userRoleclose&&<Updateuser Name={getUpdateUserdata.Name} _id={getUpdateUserdata._id} email={getUpdateUserdata.email} role={getUpdateUserdata.role} calldata={usersData} closeRoleChange={closeroleHandler}/>}
+    {userRoleclose&&<Updateuser Name={getUpdateUserdata.Name} _id={getUpdateUserdata._id} email={getUpdateUserdata.email} role={getUpdateUserdata.role} calldata={usersData} closeRoleChange={closeroleHandler} image={getUpdateUserdata?.profilepic}/>}
     </>
   )
 }

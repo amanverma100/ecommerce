@@ -104,7 +104,7 @@ const ProductModify = ({onclose,initialData,modifyeffect}) => {
          )
     }
   return (
-    <div className=' flex items-center justify-center top-0 left-0 bottom-0  right-0 z-12 fixed opacity-95 bg-slate-200'>
+    <div className=' flex items-center justify-center z-[30] top-0 left-0 bottom-0  right-0 z-12 fixed opacity-95 bg-slate-200'>
     <div className='bg-slate-700 rounded-lg shadow-lg z-13 w-[80vw] pt-6 p-4 max-w-[30rem] aspect-[9/10] overflow-y-hidden'>
    
    <IoCloseSharp className='ml-auto cursor-pointer text-3xl hover:text-yellow-100' onClick={onclose}/>

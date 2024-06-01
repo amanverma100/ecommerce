@@ -49,10 +49,10 @@ function App() {
     
     <verifyContext.Provider value={{veriUser}}>
      <Header/>
-     <main className='min-h-[calc(100vh-8.5rem)] bg-yellow-600'>
+     <main className='min-h-[calc(100vh-8rem)] pt-16  bg-yellow-600'>
       <Outlet></Outlet>
       </main>
-      <Footer/>
+      <div><Footer/></div>
       </verifyContext.Provider>
     </>
   )

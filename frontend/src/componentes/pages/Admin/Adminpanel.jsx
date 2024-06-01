@@ -10,8 +10,8 @@ const Adminpanel = () => {
     const data=useSelector((state)=>state.user?.user)
     const[isShrink,setisShtink]=useState(true);
       const hiddenset={
-       false:'flex absolute z-10 text-gray-200 h-[100vh] top-[-4.5rem] w-[10rem]  bg-gradient-to-b from-pink-600 shadow-lg to-purple-600 transition-width linear transition-all duration-300',
-        true:'flex absolute overflow-hidden text-gray-200 h-[100vh] top-[-4.5rem] w-[2.8rem] bg-gradient-to-b from-purple-700 shadow-lg to-indigo-900  transition-all transition-width ease-in duration-300'
+       false:'flex fixed overflow-hidden z-10 text-gray-200 h-[100vh] top-[0] w-[10rem]  bg-gradient-to-b from-pink-600 shadow-lg to-purple-600 transition-width linear transition-all duration-300',
+        true:'flex fixed overflow-hidden text-gray-200 h-[100vh] top-[0] w-[2.8rem] bg-gradient-to-b from-purple-700 shadow-lg to-indigo-900  transition-all transition-width ease-in duration-300'
       } 
       
       const widthset={
@@ -32,7 +32,7 @@ const Adminpanel = () => {
         }
   return (
       
-      <div className=' w-full min-h-[calc(100vh-8.4rem)] bg-red-600 hidden md:flex'>
+      <div className=' w-full h-[calc(100vh-8rem)] bg-red-600 hidden md:flex'>
       <div className={`${widthset[isShrink]}`}>
       <div className={`${hiddenset[isShrink]}`}>
       <div className='w-full  h-full relative flex text-xl px-2 py-3 flex-col justify-center gap-10'>
@@ -70,7 +70,7 @@ const Adminpanel = () => {
       
     </div>
     </div>
-    <div className='w-full bg-gray-700 pl-5 max-h-[calc(100vh-8.4rem)] overflow-y-auto  pb-12 '><Outlet/></div>
+    <div className='w-full bg-gray-700 pl-5 h-[calc(100vh-8rem)] overflow-y-auto  pb-12 '><Outlet/></div>
     </div>
     
   )

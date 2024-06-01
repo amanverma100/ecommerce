@@ -11,6 +11,7 @@ const getproduct=require('../controller/getproduct');
 const updateproduct=require('../controller/updateproduct');
 const getcategoryproduct=require('../controller/getcategoryproduct');
 const getcategorywiseproduct = require('../controller/getcategorywiseproduct');
+const getproductdetail = require('../controller/getproductdetail');
 router
  .post('/signup',userSignup)
  .post('/login',userSignin)
@@ -22,4 +23,5 @@ router
  .post('/updateproduct',Auth,updateproduct)
  .get('/categoryproduct',getcategoryproduct)
  .post('/categorywise',getcategorywiseproduct)
+ .post('/productdetail',getproductdetail)
  module.exports=router;

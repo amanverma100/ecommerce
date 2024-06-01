@@ -5,7 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import summaryAPI from '../../../common';
 import {toast} from 'react-toastify';
-const Updateuser = ({closeRoleChange,Name,email,role,_id,calldata}) => {
+const Updateuser = ({closeRoleChange,Name,email,role,_id,calldata,image}) => {
     const[getroleoption,setroleoption]=useState(role);
        function optionhandler(e)
        {
@@ -53,15 +53,18 @@ const Updateuser = ({closeRoleChange,Name,email,role,_id,calldata}) => {
     
      
        return (
-        <div className=' flex items-center justify-center top-0 left-0 bottom-0  right-0 z-12 fixed opacity-95 bg-slate-200'>
+        <div className=' flex items-center z-[30] justify-center top-0 left-0 bottom-0  right-0 z-12 fixed opacity-95 bg-slate-200'>
         <div className='bg-slate-700 rounded-lg shadow-lg z-13 w-[80vw] pt-6 p-4 max-w-[21rem] aspect-[9/10] '>
         <IoCloseSharp className='ml-auto cursor-pointer text-3xl hover:text-yellow-100' onClick={closeRoleChange}/>
         <div className='text-center text-xl '>Update Role</div>
         <hr className='max-w-[9rem] w-[33%] mx-auto mt-2 border-1  shadow-xl border-gray-500'></hr>
         <div className='flex items-center  gap-8 mt-6'>
             <div className="overflow-hidden w-16 h-16 rounded-full bg-white">
-                <img className='w-full h-full'>
+                {image?<img className='w-full h-full' src={image}>
                 </img>
+                :
+                <div className='w-full h-full capitalize bg-blue-600 text-yellow-600 pt-3 text-2xl font-semibold text-center'>{Name.charAt(0)}</div>
+                  }
             </div>
             <div className='capitalize text-xl'>{Name}</div>
         </div>

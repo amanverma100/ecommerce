@@ -9,6 +9,7 @@ import Users from '../componentes/pages/Admin/Users';
 import Updateuser from '../componentes/pages/Admin/Updateuser';
 import Products from '../componentes/pages/Admin/Products';
 import GetCategoryProduct from '../componentes/pages/Product/GetCategoryProduct';
+import ProductDetail from '../componentes/pages/Product/ProductDetail';
 const router=createBrowserRouter([{
     path:"/",
     element:<App/>,
@@ -49,7 +50,14 @@ const router=createBrowserRouter([{
         {
             path:"categoryproduct/:categoryname",
             element:<GetCategoryProduct/>
-        }
+        },
+        {
+            path:"productdetail/:id",
+            element:<ProductDetail/>
+        },
+        
+            
+        
        
 
     ]

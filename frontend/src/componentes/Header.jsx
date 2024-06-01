@@ -27,7 +27,7 @@ console.log("headerinfo",data);
       toast.success("logout sucessfully");  
 }
   return (
-      <div className='h-16 shadow-sm pl-9 flex justify-between items-center px-6 bg-gradient-to-r from-blue-500 to-green-400 shadow-lg '>
+      <div className='h-16 fixed w-full z-[15] shadow-sm pl-9 flex justify-between items-center px-6 bg-gradient-to-r from-blue-500 to-green-400 shadow-lg '>
         <div>
           <Link to="/">
         <Logo/>

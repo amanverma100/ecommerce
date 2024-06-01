@@ -6,6 +6,9 @@ import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 import { FaRupeeSign } from "react-icons/fa";
 import { FaChevronLeft,FaChevronRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import AddToCart from '../../../helper/AddToCart';
+
 const CategoryWise = ({catg,heading}) => {
   const [getloading,setloading]=useState(true);
   const [getCatData,setCatData]= useState([]);
@@ -31,7 +34,7 @@ const CategoryWise = ({catg,heading}) => {
             }
       }    
       }
-      function rightShift()
+      function leftShift()
      {      
           if(transX<getCatData.length-1)
             {    
@@ -39,7 +42,7 @@ const CategoryWise = ({catg,heading}) => {
             }
             
      }
-     function leftShift()
+     function rightShift ()
      {
         if(transX>0)
             {
@@ -60,7 +63,7 @@ const CategoryWise = ({catg,heading}) => {
           loadinglist.map((element,index)=>
        {
            return(
-              <div className=' h-[180px] md:h-[250px] w-[180px] md:w-[200px] rounded-md cursor-pointer  bg-gray-100 'key={index}></div>   
+              <div className=' min-h-[150px] md:min-h-[250px] min-w-[120px] md:min-w-[200px] rounded-md cursor-pointer  bg-gray-100 'key={index}></div>   
            )
        })
      ):
@@ -68,15 +71,16 @@ const CategoryWise = ({catg,heading}) => {
       getCatData?.map((element,index)=>
    {
        return(
-          <div className=' h-[180px]  md:h-[300px]  w-[180px] px-1 py-2  hover:scale-105 md:w-[250px] rounded-md   border-gray-400 border-dashed border-[1px]'key={index} style={{transform:`translateX(${transX*100}%)`}}>
-            <img src={element?.productImage[0]} className='md:h-[70%] h-[60%] w-full object-contain p-2' ></img>
+         <Link to={`/productdetail/${element?._id}`}> <div className=' h-[140px]  md:h-[300px]  w-[180px] px-1 py-2  md:w-[250px] rounded-md   border-gray-400 border-dashed border-[1px]'key={index} style={{transform:`translateX(-${transX*100}%)`}}>
+            <img src={element?.productImage[0]} className='md:h-[70%] h-[70%] hover:scale-105 min-w-[120px] md:min-w-[210px] w-full object-contain p-2' ></img>
             <div className=' truncate px-1  md:px-2  text-black text-center text-[10px] md:text-[12px] '>{element?.productName}</div>
             <div className='flex items-center gap-2 pl-2 pt-1'>
             <div className=' truncate    flex  line-through text-green-600  text-[10px] md:text-[12px] '><FaRupeeSign/>{element?.price}</div>
             <div className=' truncate   flex   text-red-600 text-[10px] md:text-[12px] '><FaRupeeSign/>{element?.discountedprice}</div>
             </div>
-            <div className='h-[18px] md:h-[30px] md:my-4  my-2'><button className='rounded-md border-0 text-[12px] h-[18px] md:h-[30px] md:text-[14px] w-full  bg-red-600 '>Add to Cart</button></div>
+            <div className='h-[18px] md:h-[30px] md:my-4  my-2'><button className='rounded-md border-0 text-[12px] h-[18px] md:h-[30px] md:text-[14px] w-full  bg-red-600 ' onClick={(e)=>AddToCart(e,element?._id)}>Add to Cart</button></div>
             </div>
+            </Link>
             
        )
    })
