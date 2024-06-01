@@ -40,7 +40,7 @@ categoryProduct();
 const loading_display=new Array(10).fill(null);
 return (
   <div className=''> 
-    <div className='flex rounded-sm shadow-md items-center justify-center overflow-x-scroll gap-2 scrollbardisplaynone gap-4 w-full  flex-row px-1 py-1 bg-white h-24 md:h-28'> 
+    <div className='flex rounded-sm shadow-md items-center  overflow-x-scroll gap-2 scrollbardisplaynone gap-4 w-full  flex-row px-1 py-1 bg-white h-24 md:h-28'> 
     {
       getLoading?(
            loading_display.map((element,index)=>

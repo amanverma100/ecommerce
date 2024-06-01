@@ -10,6 +10,7 @@ import summaryAPI from '../../../src/common'
 import { useContext } from 'react';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Dpupload from '../../helper/Dpupload';
 const Signup = () => {
     const [showpassword,setshowpassword]=useState(false);
     const[showcpassword,setshowcpassword]=useState(false);
@@ -38,12 +39,13 @@ const [data,setdata]=useState({Name:"",email:"",password:"",confirmpassword:"",p
    const imageHandler= async(e)=>
     {
             const image= e.target.files[0];
-           const dp = await Imagetobase64(image);
-             console.log("base64",dp);
+            const uploadimage=await Dpupload(image);
+          // const dp = await Imagetobase64(image);
+             console.log("base64",uploadimage.url);
              setdata((prev)=>
             {
                return {
-                ...prev,profilepic:dp
+                ...prev,profilepic:uploadimage.url
                } ;
             });
     }

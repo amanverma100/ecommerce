@@ -27,7 +27,7 @@ console.log("headerinfo",data);
       toast.success("logout sucessfully");  
 }
   return (
-      <div className='h-16 shadow-sm pl-9 flex justify-between items-center px-6 bg-gradient-to-r from-purple-700 shadow-lg to-indigo-900'>
+      <div className='h-16 shadow-sm pl-9 flex justify-between items-center px-6 bg-gradient-to-r from-blue-500 to-green-400 shadow-lg '>
         <div>
           <Link to="/">
         <Logo/>
@@ -53,7 +53,7 @@ console.log("headerinfo",data);
         !image?
        <div className="w-10 h-10 rounded-full bg-blue-800 overflow-hidden text-center font-bold text-xl pt-1 text-yellow-400">{firstletter}</div>
        :
-       <div className='w-10 h-10 rounded-full overflow-hidden'><img src={login}  className='w-full h-full'></img></div>
+       <div className='w-10 h-10 rounded-full overflow-hidden'><img src={image}  className='w-full h-full'></img></div>
       }
 
       {data?.user?._id && data?.user?.role==="Admin"&&panel&&

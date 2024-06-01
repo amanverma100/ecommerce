@@ -60,6 +60,11 @@ const ProductCategory=[
     id:11,
     lavel:"Printer",
     value:"printer"
+ },
+ {
+   id:12,
+   lavel:"Camera",
+   value:"camera"
  }
  
 ]

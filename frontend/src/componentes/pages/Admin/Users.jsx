@@ -69,7 +69,12 @@ const Users = () => {
         <tr className='hover:bg-gray-700 hover:shadow-2xl' key={index}>
         <td className='w-[6%] py-4 shadow-md'>{index+1}</td>
         <td className='w-[8%] py-4 shadow-md '>
-        <div className='w-12 h-12 rounded-full bg-white ml-10 overflow-hidden'><img className='w-full h-full'></img></div>
+        <div className='w-12 h-12 rounded-full bg-white ml-10 overflow-hidden'>
+        {data?.profilepic?<img className='w-full h-full' src={data?.profilepic}></img>
+        :
+        <div className="w-full h-full  rounded-full bg-blue-800 border text-center font-bold text-xl pt-1 text-yellow-400 capitalize">{data?.Name.charAt(0)}</div>
+        }     
+</div>
         </td>
         <td className=' w-[20%] py-4 shadow-md'>{data?.Name}</td>
         <td className='w-[34%] py-4 shadow-md'>{data?.email}</td>

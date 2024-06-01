@@ -42,10 +42,9 @@ const UploadProduct = ({onclose,modifyeffect}) => {
 
     }
     const productimageuploadhandler=async(e)=>
-    {     console.log('file',e);
+    {     
         const image=e.target.files[0];
         const uploadimage=await imageupload(image);
-        console.log("checkimg",uploadimage);
            setData((prev)=>
             {
                 return{
