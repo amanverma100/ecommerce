@@ -5,7 +5,7 @@ const connectdb=require('./config/database')
 const router=require('./routes')
 const cookieParser=require('cookie-parser');
 const app=express();
-app.use(cors({origin:"http://localhost:5173"}));
+app.use(cors({origin:"https://amanverma100.github.io/ecommerce"}));
  //app.use(cookieParser());
 app.use(express.json());
 app.use('/api',router);
