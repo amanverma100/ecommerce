@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import AddToCart from '../../../helper/AddToCart';
 
 const CategoryWise = ({catg,heading}) => {
+  const [getcat,setcat]=useState(catg);
   const [getloading,setloading]=useState(true);
   const [getCatData,setCatData]= useState([]);
   const [transX,setTransX]=useState(0);
@@ -18,7 +19,7 @@ const CategoryWise = ({catg,heading}) => {
         try{
           setloading(true);
          const response= await axios.post(summaryAPI.categorywise.url,{
-          category:catg
+          category:getcat
          });
           const data=response?.data?.catWiseData;
           if(response?.data?.success===true)
