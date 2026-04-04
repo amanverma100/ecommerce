@@ -43,7 +43,7 @@ pipeline {
                 }
                 stage('Frontend Tests') {
                     steps {
-                        dir('frontend') { sh 'npm run test' }
+                        dir('frontend') { sh 'npm test' }
                     }
                 }
             }
