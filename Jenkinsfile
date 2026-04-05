@@ -36,11 +36,14 @@ pipeline {
                         dir('frontend') { sh 'npm install' }
                     }
                 }
-                stage('Backend Install') {
-                    steps {
-                        dir('backend') { sh 'npm install' }
-                    }
-                }
+              stage('Backend Install') {
+    steps {
+        dir('backend') {
+            sh 'rm -f package-lock.json' 
+            sh 'npm install'               
+        }
+    }
+}
             }
         }
 
