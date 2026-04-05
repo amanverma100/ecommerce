@@ -1,6 +1,8 @@
 pipeline {
     agent any
 
+    
+
     tools {
         nodejs 'NodeJS20'
     }
@@ -10,6 +12,14 @@ pipeline {
         IMAGE_FRONTEND = "${DOCKERHUB_USER}/ecommerce-frontend"
         IMAGE_BACKEND  = "${DOCKERHUB_USER}/ecommerce-backend"
     }
+
+    stages {
+
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
 
     stages {
 
