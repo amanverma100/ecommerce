@@ -13,15 +13,15 @@ pipeline {
         IMAGE_BACKEND  = "${DOCKERHUB_USER}/ecommerce-backend"
     }
 
+    
+
     stages {
 
-        stage('Clean Workspace') {
+         stage('Clean Workspace') {
             steps {
                 cleanWs()
             }
         }
-
-    stages {
 
         stage('Checkout') {
             steps {
