@@ -40,7 +40,9 @@ pipeline {
     steps {
         dir('backend') {
             sh 'rm -f package-lock.json' 
-            sh 'npm install'               
+            sh 'npm install' 
+            sh 'find node_modules/gopd -name "*.js" | head -5'
+            sh 'cp node_modules/gopd/gOPD.js node_modules/gopd/gOPD.js 2>/dev/null || npm install gopd --force'              
         }
     }
 }
